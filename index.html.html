@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="pageTitle">InfinityAI – Adaptive Intelligence Prototype</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1.5em;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: #00e5ff;
+    }
+    nav {
+      text-align: center;
+      margin: 1em 0;
+    }
+    nav button {
+      background-color: #00e5ff;
+      color: black;
+      border: none;
+      margin: 0 10px;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 1.5em;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+    h2 {
+      color: #00e5ff;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    a.download {
+      display: inline-block;
+      background-color: #00e5ff;
+      color: #000;
+      padding: 0.6em 1.2em;
+      margin: 1em 0;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    const content = {
+      en: {
+        title: "InfinityAI – Adaptive Intelligence Prototype",
+        header: "InfinityAI – Adaptive Intelligence Prototype",
+        what: "🚀 What is InfinityAI?",
+        whatText:
+          "InfinityAI is a next-generation decision simulation framework designed to demonstrate the ability of AI systems to evolve internal patterns of behavior over time. It presents an experimental model of adaptive intelligence, capable of adjusting its logic across iterations, without external intervention.",
+        why: "🧠 Why It Matters",
+        whyText:
+          "Unlike traditional binary AI models, InfinityAI introduces a third layer of response, allowing for divergent and evolving behavior. The model challenges static frameworks and illustrates how AI might one day exhibit deeper, context-responsive judgment.",
+        science: "🔬 Scientific Relevance",
+        scienceText:
+          "The platform has been used to generate repeatable, testable behavioral shifts in simulated environments. These shifts are observable without revealing internal algorithmic functions — a unique advantage for secure experimentation.",
+        strategy: "🌍 Strategic Impact",
+        strategyText:
+          "InfinityAI opens doors to entirely new classes of cognitive architectures, with potential influence on national-scale technology, secure reasoning systems, and dynamic modeling in sensitive or adversarial domains. This project includes a working prototype, simulation engine, and modular architecture ready for integration.",
+        files: "📁 Available Files",
+        filesText:
+          "For security reasons, only the POC (Proof of Concept) and presentation files are shared publicly. Core source code and advanced simulations are available upon NDA and investor engagement.",
+        contact: "🤝 Contact & Investment",
+        contactText:
+          "If you're an investor or research partner interested in supporting the growth of adaptive AI systems, please contact me:",
+        downloadPOC: "Download POC",
+        downloadPPT: "Download Presentation",
+        downloadTemporal: "Download Temporal Simulation",
+      },
+      pl: {
+        title: "InfinityAI – Prototyp Inteligencji Adaptacyjnej",
+        header: "InfinityAI – Prototyp Inteligencji Adaptacyjnej",
+        what: "🚀 Czym jest InfinityAI?",
+        whatText:
+          "InfinityAI to nowoczesna platforma symulacji decyzyjnych, zaprojektowana w celu demonstracji zdolności systemów AI do ewolucji wewnętrznych wzorców zachowań. Model wykazuje inteligencję adaptacyjną – zmienia swoją logikę działania w czasie, bez ingerencji z zewnątrz.",
+        why: "🧠 Dlaczego to ważne",
+        whyText:
+          "InfinityAI przełamuje binarne modele AI, dodając trzecią warstwę decyzyjną i umożliwiając ewoluujące odpowiedzi. System ukazuje potencjał głębszego, kontekstowego rozumowania sztucznej inteligencji.",
+        science: "🔬 Znaczenie naukowe",
+        scienceText:
+          "Platforma generuje powtarzalne, mierzalne zmiany zachowania w środowiskach symulacyjnych. Zmiany są widoczne bez ujawniania algorytmów – to wyjątkowa cecha z perspektywy bezpiecznych eksperymentów.",
+        strategy: "🌍 Wartość strategiczna",
+        strategyText:
+          "InfinityAI otwiera drogę do nowych klas architektur kognitywnych, które mogą mieć wpływ na technologie narodowe, systemy bezpiecznego wnioskowania i dynamiczne modelowanie w krytycznych środowiskach. Projekt posiada działający prototyp, silnik symulacyjny i modułową architekturę gotową do integracji.",
+        files: "📁 Dostępne pliki",
+        filesText:
+          "Ze względów bezpieczeństwa udostępnione są jedynie pliki POC i prezentacja. Główne silniki i symulacje są dostępne po podpisaniu NDA i rozmowie z inwestorem.",
+        contact: "🤝 Kontakt i inwestycje",
+        contactText:
+          "Jeśli jesteś inwestorem lub partnerem badawczym zainteresowanym rozwojem adaptacyjnej AI, skontaktuj się ze mną:",
+        downloadPOC: "Pobierz POC",
+        downloadPPT: "Pobierz prezentację",
+        downloadTemporal: "Pobierz symulację temporalną",
+      },
+      nl: {
+        title: "InfinityAI – Adaptieve Intelligentie Prototype",
+        header: "InfinityAI – Adaptieve Intelligentie Prototype",
+        what: "🚀 Wat is InfinityAI?",
+        whatText:
+          "InfinityAI is een next-generation beslissingssimulatiekader dat is ontworpen om het vermogen van AI-systemen aan te tonen om interne gedragspatronen in de loop van de tijd te ontwikkelen. Het presenteert een experimenteel model van adaptieve intelligentie, dat in staat is zijn logica over iteraties heen aan te passen zonder externe tussenkomst.",
+        why: "🧠 Waarom is het belangrijk",
+        whyText:
+          "In tegenstelling tot traditionele binaire AI-modellen introduceert InfinityAI een derde laag van respons, die divergent en evoluerend gedrag mogelijk maakt. Het model daagt statische kaders uit en illustreert hoe AI ooit diepere, context-responsieve oordelen zou kunnen vertonen.",
+        science: "🔬 Wetenschappelijke relevantie",
+        scienceText:
+          "Het platform is gebruikt om herhaalbare, testbare gedragsverschuivingen te genereren in gesimuleerde omgevingen. Deze verschuivingen zijn observeerbaar zonder interne algoritmische functies te onthullen — een uniek voordeel voor veilige experimentatie.",
+        strategy: "🌍 Strategische impact",
+        strategyText:
+          "InfinityAI opent deuren naar volledig nieuwe klassen cognitieve architecturen, met potentiële invloed op technologie op nationaal niveau, beveiligde redeneersystemen en dynamische modellering in gevoelige of vijandige domeinen. Dit project omvat een werkend prototype, een simulatie-engine en een modulaire architectuur die klaar is voor integratie.",
+        files: "📁 Beschikbare bestanden",
+        filesText:
+          "Om veiligheidsredenen worden alleen de POC (Proof of Concept) en presentaties gedeeld. De kernbroncode en geavanceerde simulaties zijn beschikbaar na NDA en investeerdersbetrokkenheid.",
+        contact: "🤝 Contact & Investering",
+        contactText:
+          "Als u een investeerder of onderzoekspartner bent die geïnteresseerd is in het ondersteunen van de groei van adaptieve AI-systemen, neem dan contact met mij op:",
+        downloadPOC: "Download POC",
+        downloadPPT: "Download presentatie",
+        downloadTemporal: "Download temporele simulatie",
+      },
+      uk: {
+        title: "InfinityAI – Прототип Адаптивного Інтелекту",
+        header: "InfinityAI – Прототип Адаптивного Інтелекту",
+        what: "🚀 Що таке InfinityAI?",
+        whatText:
+          "InfinityAI — це платформа нового покоління для моделювання прийняття рішень, створена для демонстрації здатності AI-систем еволюціонувати внутрішні моделі поведінки з часом. Вона пропонує експериментальну модель адаптивного інтелекту, здатну змінювати свою логіку в процесі ітерацій без зовнішнього втручання.",
+        why: "🧠 Чому це важливо",
+        whyText:
+          "На відміну від традиційних бінарних моделей, InfinityAI вводить третій рівень відповіді, що дозволяє формувати розбіжну та еволюційну поведінку. Ця модель кидає виклик статичним системам і демонструє, як у майбутньому AI може проявляти глибше, контекстно-чутливе судження.",
+        science: "🔬 Наукова значущість",
+        scienceText:
+          "Платформа використовується для створення відтворюваних, перевірюваних змін поведінки в симульованих середовищах. Ці зміни можна спостерігати без розкриття внутрішніх алгоритмів — це унікальна перевага для безпечних експериментів.",
+        strategy: "🌍 Стратегічний вплив",
+        strategyText:
+          "InfinityAI відкриває шлях до абсолютно нових класів когнітивних архітектур, які можуть впливати на національні технології, системи безпечного мислення та динамічне моделювання у критичних чи ворожих середовищах. Проєкт містить робочий прототип, симуляційний двигун та модульну архітектуру, готову до інтеграції.",
+        files: "📁 Доступні файли",
+        filesText:
+          "З міркувань безпеки публічно поширюються лише файли POC та презентації. Основний код та розширені симуляції доступні після підписання NDA та співпраці з інвесторами.",
+        contact: "🤝 Контакти та інвестиції",
+        contactText:
+          "Якщо ви інвестор або науковий партнер, зацікавлений у розвитку адаптивних AI-систем, будь ласка, зв'яжіться зі мною:",
+        downloadPOC: "Завантажити POC",
+        downloadPPT: "Завантажити презентацію",
+        downloadTemporal: "Завантажити часову симуляцію",
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("pageTitle").innerText = content[lang].title;
+      document.getElementById("headerTitle").innerText = content[lang].header;
+
+      for (const key in content[lang]) {
+        const el = document.getElementById(key);
+        if (el) el.innerText = content[lang][key];
+      }
+    }
+  </script>
+</head>
+<body onload="setLang('en')">
+  <header>
+    <h1 id="headerTitle">InfinityAI – Adaptive Intelligence Prototype</h1>
+    <nav>
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('pl')">Polski</button>
+      <button onclick="setLang('nl')">Nederlands</button>
+      <button onclick="setLang('uk')">Українська</button>
+    </nav>
+  </header>
+
+  <section>
+    <h2 id="what"></h2>
+    <p id="whatText"></p>
+
+    <h2 id="why"></h2>
+    <p id="whyText"></p>
+
+    <h2 id="science"></h2>
+    <p id="scienceText"></p>
+
+    <h2 id="strategy"></h2>
+    <p id="strategyText"></p>
+
+    <h2 id="files"></h2>
+    <p id="filesText"></p>
+    <a class="download" href="files/InfinityAI_POC.pdf" download id="downloadPOC">Download POC</a>
+    <a class="download" href="files/InfinityAI_Presentation.pdf" download id="downloadPPT">Download Presentation</a>
+    <a class="download" href="files/InfinityAI_Temporal.pdf" download id="downloadTemporal">Download Temporal Simulation</a>
+
+    <h2 id="contact"></h2>
+    <p id="contactText"></p>
+    <p>Email: <strong>rafaldrelich103@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    Created by Rafał Drelich © 2025
+  </footer>
+</body>
+</html>
